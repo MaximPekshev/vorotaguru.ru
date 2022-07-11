@@ -1,0 +1,97 @@
+{% extends 'baseapp/category/base_category.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="content">
+    <section class="no-padding" data-scrollax-parent="true">
+        <div class="parallax-inner page-title-wrap">
+            <div class="bg" data-bg="{% static 'images/as_banner/3.jpg' %}" data-scrollax="properties: { translateY: '40%' }"></div>
+            <div class="parallax-wrap">
+                <div class="container">
+                    <div class="page-title">
+                        <h3>{{ category.title }}</h3>
+                    </div>
+                    <div class="hero-scroll-down-notifer  ">
+                        <div class="scroll-down-wrap ">
+                        </div>
+                    </div>
+                    <div class="pw_dec"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="breadcrumbs fl-wrap">
+        <div class="container">
+            <div class="breadcrumbs-list">
+                <a href="{% url 'show_index_page' %}">Главная</a>
+                <a href="{% url 'show_corporate_client_page' %}">{{ category.parent_category.title }}</a>
+                <span>{{ category.title }}</span>
+            </div>
+        </div>
+    </div>
+    <section data-scrollax-parent="true">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="about-title fl-wrap">
+                        <h2 class="con-heading">{{ category.title }}</h2>
+                    </div>
+                    <div class="about-wrap">
+                        <p>{{ category.description | linebreaksbr }}</p>
+                        <a href="#need_consultation" class="btn float-btn"><span>Заказать товар</span></a>
+                        {% comment %} <a href="#" class="btn as-btn-white"><span>Заказать товар</span></a> {% endcomment %}
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <div class="about-img fl-wrap">
+                        <img src="{% if category.picture %}{{ category.picture.url }}{% else %}{% static 'images/folio/1.jpg' %}{% endif %}" class="respimg" alt="{{ category.title }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gray-bg small-top_padding stp-bot">
+        <div class="hex-bg"><span class="hex hex1"></span><span class="hex hex2"></span><span class="hex hex3"></span></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="fl-wrap post-container">
+                        <!-- post-->
+                        <article class="post single-post">
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Ассортимент ангарных ворот ДорХан</h4>
+                                <div class="clearfix"></div>
+                                <p>
+                                    Компания реализует несколько видов ограждений неограниченного размера:
+                                </p>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Шторного типа мультисекционные.</li>
+                                    <li class="as-li-left">Шторного типа моносекционные.</li>
+                                    <li class="as-li-left">Нестандартные модели по индивидуальным проектам. Общая особенность ворот в ангар заключается в том, что благодаря продуманной конструкции их ширина практически не ограничена. Потому они могут эксплуатироваться в ангарах, предназначенных как для хранения и обслуживания широкофюзеляжных самолетов, так и небольших летающих аппаратов бизнес-класса. Эти конструкции обладают повышенной прочностью, герметичностью и устойчивостью к вредным воздействиям.</li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                                <p>
+                                    Ответственный подход компании ДорХан к их производству выражается:
+                                </p>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">В комплексном решении. Специалисты производителя полностью отслеживают весь цикл — от изготовления до установки</li>
+                                    <li class="as-li-left">В том, что производитель имеет огромный опыт проектирования — компания развивает данное направление с 1932 г. И только за последние 15 лет было установлено более 120 ворот для широкопролетных ангаров.</li>
+                                    <li class="as-li-left">В возможности в небольшие сроки произвести модели любого уровня сложности.</li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="fl-wrap limit-box"></div>
+        </div>
+    </section>
+
+
+</div>
+
+{{ block.super }}
+{% endblock %}

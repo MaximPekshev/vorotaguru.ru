@@ -1,0 +1,79 @@
+{% extends 'baseapp/category/base_category.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="content">
+
+    <section class="no-padding" data-scrollax-parent="true">
+        <div class="parallax-inner page-title-wrap">
+            <div class="bg" data-bg="{% static 'images/as_banner/3.jpg' %}" data-scrollax="properties: { translateY: '40%' }"></div>
+            <div class="parallax-wrap">
+                <div class="container">
+                    <div class="page-title">
+                        <h3>Портфолио</h3>
+                    </div>
+                    <div class="hero-scroll-down-notifer  ">
+                        <div class="scroll-down-wrap ">
+                        </div>
+                    </div>
+                    <div class="pw_dec"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="breadcrumbs fl-wrap">
+        <div class="container">
+            <div class="breadcrumbs-list">
+                <a href="{% url 'show_index_page' %}">Главная</a><span>Портфолио</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- section -->
+    <section class="gray-bg small-top_padding stp-bot">
+        <div class="hex-bg"><span class="hex hex1"></span><span class="hex hex2"></span><span class="hex hex3"></span></div>
+        <div class="container">
+            <a href="#" class="mob-hid_btn darkbg_2 show-hidd-filters"><i class="fal fa-filter"></i> Фильтр</a>
+            <!-- portfolio filters -->
+            <div class="filter-holder inline-filter mob-hid_filters fl-wrap">
+                <div class="gallery-filters">
+                    <a href="#" class="gallery-filter gallery-filter-active" data-filter="*"><span>Все</span></a>
+                    {% for item in portfolio_category %}
+                    <a href="#" class="gallery-filter " data-filter=".{{ item.cpu_slug }}"><span>{{ item.title }}</span></a>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- portfolio filters end-->
+            <!-- portfolio -->
+            
+            <div class="gallery-items grid-small-pad lightgallery">
+                {% for item in portfolio %}
+                <div class="gallery-item {{ item.parent_category.cpu_slug }}">
+                    <div class="grid-item-holder">
+                        <div class="folio-img hov_zoom">
+                            <span class="overlay"></span>
+                            <img src="{% if item.picture %}{{ item.picture.url }}{% else %}{% static 'images/folio/1.jpg' %}{% endif %}" alt="{{ item.title }}">
+                            <a href="{% if item.picture %}{{ item.picture.url }}{% else %}{% static 'images/folio/1.jpg' %}{% endif %}" class="box-media-zoom   popup-image"><i class="fas fa-search"></i></a>
+                            {% comment %} <div class="grid-det_category"><a href="#">Renovate</a> <a href="#">Construction</a></div> {% endcomment %}
+                        </div>
+                        {% comment %} <div class="grid-item">
+                            <h3><a href="portfolio-single.html">Greenhouse Construction</a></h3>
+                        </div> {% endcomment %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <!-- portfolio end-->
+            <div class="clearfix"></div>
+            <div class="order-wrap ord-wrp_mar fl-wrap">
+                <div class="row">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--services end-->
+</div>
+{{ block.super }}
+{% endblock %}

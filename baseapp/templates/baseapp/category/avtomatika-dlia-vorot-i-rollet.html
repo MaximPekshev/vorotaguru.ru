@@ -1,0 +1,107 @@
+{% extends 'baseapp/category/base_category.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="content">
+    <section class="no-padding" data-scrollax-parent="true">
+        <div class="parallax-inner page-title-wrap">
+            <div class="bg" data-bg="{% static 'images/as_banner/3.jpg' %}" data-scrollax="properties: { translateY: '40%' }"></div>
+            <div class="parallax-wrap">
+                <div class="container">
+                    <div class="page-title">
+                        <h3>{{ category.title }}</h3>
+                    </div>
+                    <div class="hero-scroll-down-notifer  ">
+                        <div class="scroll-down-wrap ">
+                        </div>
+                    </div>
+                    <div class="pw_dec"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="breadcrumbs fl-wrap">
+        <div class="container">
+            <div class="breadcrumbs-list">
+                <a href="{% url 'show_index_page' %}">Главная</a>
+                <a href="{% url 'show_private_client_page' %}">{{ category.parent_category.title }}</a>
+                <span>{{ category.title }}</span>
+            </div>
+        </div>
+    </div>
+    <section data-scrollax-parent="true">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="about-title fl-wrap">
+                        <h2 class="con-heading">{{ category.title }}</h2>
+                    </div>
+                    <div class="about-wrap">
+                        <p>{{ category.description | linebreaksbr }}</p>
+                        <a href="#need_consultation" class="btn float-btn"><span>Заказать товар</span></a>
+                        {% comment %} <a href="#" class="btn as-btn-white"><span>Заказать товар</span></a> {% endcomment %}
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <div class="about-img fl-wrap">
+                        <img src="{% if category.picture %}{{ category.picture.url }}{% else %}{% static 'images/folio/1.jpg' %}{% endif %}" class="respimg" alt="{{ category.title }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gray-bg small-top_padding stp-bot">
+        <div class="hex-bg"><span class="hex hex1"></span><span class="hex hex2"></span><span class="hex hex3"></span></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="fl-wrap post-container">
+                        <!-- post-->
+                        <article class="post single-post">
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">У нас вы можете заказать автоматику для различных видов ворот:</h4>
+                                <div class="clearfix"></div>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Для секционных ворот. Производитель создал приборы двух видов: потолочные (серия Sectional) и вальные (серия Shaft). Приводы Sectional устанавливают в бытовых целях, когда масса полотна достигает 220 кг.</li>
+                                    <li class="as-li-left">Электроприводы Shaft используют в промышленности. Они поднимают полотна массой до 850 кг.</li>
+                                    <li class="as-li-left">Для распашных ворот. Производителем выпускаются 2 вида конструкций: линейные Swing и рычажные ARM. Масса полотна – 200–500 кг.</li>
+                                    <li class="as-li-left">Для откатных ворот. Устройства серии Sliding работают со сдвижными конструкциями, где масса полотна достигает 2100 кг.</li>
+                                    <li class="as-li-left">Автоматика для роллет и рольворот. DoorHan производит внутривальную серию RS и навальную серию RV. Масса полотна – 15–80 кг.</li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                                
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Аксессуары для автоматики</h4>
+                                <div class="clearfix"></div>
+                                <p>
+                                    Мы предлагаем различные дополнения к автоматике:
+                                </p>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Блоки управления регулируют работу приводов</li>
+                                    <li class="as-li-left">Ключ-кнопки дают команды об открывании или закрывании ворот и шлагбаумов блокам управления</li>
+                                    <li class="as-li-left">Пульты дистанционного управления применяются для работы с оборудованием на расстоянии</li>
+                                    <li class="as-li-left">Светофоры повышают безопасность движения автотранспорта при въезде и выезде с огороженной территории.</li>
+                                    <li class="as-li-left">Звуковые сигнализации предупреждают о движении ограждающей конструкции.</li>
+                                    <li class="as-li-left">Приемники принимают сигналы от пульта дистанционного управления.</li>
+                                    <li class="as-li-left">Беспроводные клавиатуры – приборы для дистанционной работы с электроприводом, снабженные встроенным или внешним приемником.</li>
+                                    <li class="as-li-left">Фотоэлементы используются при автоматическом открывании либо блокировке закрывания, если обнаружены движущиеся объекты.</li>
+                                    <li class="as-li-left">GSM-модули важны при управлении с помощью мобильных телефонов.</li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="fl-wrap limit-box"></div>
+        </div>
+    </section>
+
+
+</div>
+
+{{ block.super }}
+{% endblock %}

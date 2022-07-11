@@ -1,0 +1,118 @@
+{% extends 'baseapp/category/base_category.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="content">
+    <section class="no-padding" data-scrollax-parent="true">
+        <div class="parallax-inner page-title-wrap">
+            <div class="bg" data-bg="{% static 'images/as_banner/3.jpg' %}" data-scrollax="properties: { translateY: '40%' }"></div>
+            <div class="parallax-wrap">
+                <div class="container">
+                    <div class="page-title">
+                        <h3>{{ category.title }}</h3>
+                    </div>
+                    <div class="hero-scroll-down-notifer  ">
+                        <div class="scroll-down-wrap ">
+                        </div>
+                    </div>
+                    <div class="pw_dec"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="breadcrumbs fl-wrap">
+        <div class="container">
+            <div class="breadcrumbs-list">
+                <a href="{% url 'show_index_page' %}">Главная</a>
+                <a href="{% url 'show_private_client_page' %}">{{ category.parent_category.title }}</a>
+                <span>{{ category.title }}</span>
+            </div>
+        </div>
+    </div>
+    <section data-scrollax-parent="true">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="about-title fl-wrap">
+                        <h2 class="con-heading">{{ category.title }}</h2>
+                    </div>
+                    <div class="about-wrap">
+                        <p>{{ category.description | linebreaksbr }}</p>
+                        <a href="#need_consultation" class="btn float-btn"><span>Заказать товар</span></a>
+                        {% comment %} <a href="#" class="btn as-btn-white"><span>Заказать товар</span></a> {% endcomment %}
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <div class="about-img fl-wrap">
+                        <img src="{% if category.picture %}{{ category.picture.url }}{% else %}{% static 'images/folio/1.jpg' %}{% endif %}" class="respimg" alt="{{ category.title }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gray-bg small-top_padding stp-bot">
+        <div class="hex-bg"><span class="hex hex1"></span><span class="hex hex2"></span><span class="hex hex3"></span></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="fl-wrap post-container">
+                        <!-- post-->
+                        <article class="post single-post">
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Конструкция входных металлических дверей</h4>
+                                <div class="clearfix"></div>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Штыри противосъемные</li>
+                                    <li class="as-li-left">Петли стальные</li>
+                                    <li class="as-li-left">Полотно дверное</li>
+                                    <li class="as-li-left">Уплотнитель</li>
+                                    <li class="as-li-left">Утеплитель, наполнитель</li>
+                                    <li class="as-li-left">Дверной глазок с углом обзора 180°</li>
+                                    <li class="as-li-left">Накладка для сувальдного замка</li>
+                                    <li class="as-li-left">Врезной сувальдный замок</li>
+                                    <li class="as-li-left">Подпружиненные ручки на раздельной планке</li>
+                                    <li class="as-li-left">Цилиндровый механический замок</li>
+                                    <li class="as-li-left">Броненакладка для цилиндрового механизма</li>
+                                    <li class="as-li-left">Механизм цилиндровый «ключ-вертушка»</li>
+                                    <li class="as-li-left">Покрытие порошковое</li>
+                                    <li class="as-li-left">Коробка дверная</li>
+                                    <li class="as-li-left">Порог из стали</li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Способы монтажа входных дверей</h4>
+                                <div class="clearfix"></div>
+                                <p>
+                                    Монтаж входной двери DoorHan осуществляется накладным способом. Наличник перекрывает монтажный зазор, поэтому выступает и в роли декоративного
+                                    элемента. Там, где согласно требованиям эвакуации, открытие осуществляется внутрь, рекомендуется устанавливать входные двери ДорХан с коробкой
+                                    внутреннего открывания. В случае необходимости установить конструкцию на объекте без простенков или открывать входные металлические двери
+                                    ДорХан как внутрь, так и наружу, рекомендуется выполнять монтаж врезным способом.
+                                </p>
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Преимущества входных металлических дверей Doorhan</h4>
+                                <div class="clearfix"></div>
+                                <p>
+                                    Подвижные конструкции DoorHan подойдут всем, кто хочет получить высокое качество изделий и надежную степень защиты за лояльную стоимость. Вы можете 
+                                    оформить заказ на нашем сайте, где на фирменные металлические входные двери цены ниже, чем в розничных магазинах конкурентов. Мы рекомендуем 
+                                    купить оригинальную продукцию известного бренда в Белгороде с сопутствующими вспомогательными аксессуарами и устройствами контроля доступа для 
+                                    большего комфорта эксплуатации. Универсальная конструкция подойдет под любые типы проемов, что дает возможность устанавливать входные двери ДорХан быстро в разных помещениях.
+                                </p>
+                                <span class="fw-separator fl-wrap"></span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="fl-wrap limit-box"></div>
+        </div>
+    </section>
+
+
+</div>
+
+{{ block.super }}
+{% endblock %}

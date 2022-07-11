@@ -1,0 +1,383 @@
+{% extends 'baseapp/base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="content">
+        <section class="no-padding">
+            <div class="hero-wrap fl-wrap darkbg_2">
+                <div class="hero-wrap-container">
+                    <div class="hero-slider-wrap fl-wrap full-height">
+                        <div class="hero-slider fl-wrap full-height">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="fs-slider-item fl-wrap">
+                                            <div class="bg" data-bg="{% static 'images/banner/banner_4.png' %}" data-swiper-parallax="40%"></div>
+                                            <div class="overlay"></div>
+                                            <div class="hero-wrap-title">
+                                                <div class="container">
+                                                    <div class="hero-wrap-title_item fl-wrap">
+                                                        <h3>Автоматические секционные ворота</h3>
+                                                        <h2>Необходимо закрыть въезд<br>  в <span>гараж</span> или во <span>двор</span> <br>под навес?</h2>
+                                                        <div class="clearfix"></div>
+                                                        <h4>c этим отлично справятся секционные ворота.</h4>
+                                                        <div class="clearfix"></div>
+                                                        <a href="services.html" class="hc_btn color-bg"><span>Получить консультацию</span></a>
+                                                    </div>
+                                                    <div class="hero-scroll-down-notifer  ">
+                                                        <div class="scroll-down-wrap ">
+                                                            <div class="mousey">
+                                                                <div class="scroller color-bg"></div>
+                                                            </div>
+                                                        </div>
+                                                        <i class="far fa-angle-down"></i>
+                                                    </div>
+                                                    <div class="hwt_dec" data-swiper-parallax="50%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="fs-slider-item fl-wrap">
+                                            <div class="bg" data-bg="{% static 'images/banner/banner_2.png' %}" data-swiper-parallax="40%"></div>
+                                            <div class="overlay"></div>
+                                            <div class="hero-wrap-title">
+                                                <div class="container">
+                                                    <div class="hero-wrap-title_item fl-wrap">
+                                                        <h3>Откатные ворота</h3>
+                                                        <h2>Автоматические откатные<br> и распашные <span>ворота</span></h2>
+                                                        <div class="clearfix"></div>
+                                                        <h4>доставка, монтаж, пост гарантийное обслуживание.</h4>
+                                                        <div class="clearfix"></div>
+                                                        <a href="portfolio-single.html" class="hc_btn color-bg"><span>Вызвать замерщика</span></a>
+                                                    </div>
+                                                    <div class="hwt_dec" data-swiper-parallax="50%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="fs-slider-item fl-wrap">
+                                            <div class="bg" data-bg="{% static 'images/banner/banner_1.png' %}" data-swiper-parallax="40%"></div>
+                                            <div class="overlay"></div>
+                                            <div class="hero-wrap-title">
+                                                <div class="container">
+                                                    <div class="hero-wrap-title_item fl-wrap">
+                                                        <h3>Автоматика</h3>
+                                                        <h2>Нужна <span>автоматика</span> на откатные <br> или распашные ворота?</h2>
+                                                        <div class="clearfix"></div>
+                                                        <h4>В наличии и под заказ автоматика всех ведущих производителей мира с гарантией.</h4>
+                                                        <div class="clearfix"></div>
+                                                        <a href="shop.html" class="hc_btn color-bg"><span>Бесплатная консультация</span></a>
+                                                    </div>
+                                                    <div class="hwt_dec" data-swiper-parallax="50%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="fs-slider-item fl-wrap">
+                                            <div class="bg" data-bg="{% static 'images/banner/banner_3.png' %}" data-swiper-parallax="40%"></div>
+                                            <div class="overlay"></div>
+                                            <div class="hero-wrap-title">
+                                                <div class="container">
+                                                    <div class="hero-wrap-title_item fl-wrap">
+                                                        <h3>Автоматика</h3>
+                                                        <h2>Нужна <span>автоматика</span> на откатные <br> или распашные ворота?</h2>
+                                                        <div class="clearfix"></div>
+                                                        <h4>В наличии и под заказ автоматика всех ведущих производителей мира с гарантией.</h4>
+                                                        <div class="clearfix"></div>
+                                                        <a href="shop.html" class="hc_btn color-bg"><span>Бесплатная консультация</span></a>
+                                                    </div>
+                                                    <div class="hwt_dec" data-swiper-parallax="50%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--slide end -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-slider-cont hero-slider-cont-prev"><i class="fas fa-caret-left"></i></div>
+                        <div class="hero-slider-cont hero-slider-cont-next"><i class="fas fa-caret-right"></i></div>
+                        <div class="hero-slider-pagination hsp_mob"></div>
+                    </div>
+                </div>
+                <div class="slider-progress-bar act-slider">
+                    <span>
+                        <svg class="circ" width="30" height="30">
+                            <circle class="circ2" cx="15" cy="15" r="13" stroke="rgba(255,255,255,0.4)" stroke-width="1" fill="none" />
+                            <circle class="circ1" cx="15" cy="15" r="13" stroke="#f7941d" stroke-width="2" fill="none" />
+                        </svg>
+                    </span>
+                </div>
+                <div class="play-pause_slider hsc_pp auto_actslider"><i class="fas fa-play"></i></div>
+            </div>
+        </section>
+        <section class="gray-bg small-padding half-bg_dec">
+            <div class="container">
+                <div class="main-section_text-block fl-wrap">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Наши преимущества</h4>
+                            <h2>Заминаемся установкой автоматических ворот с 2014 года.<br> В штате три монтажные бригады.</h2>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-5">
+                            <p>
+                                Вы получите высококлассный сервис по подбору и монтажу автоматических секционных ворот.
+                                Мы всегда на связи и готовы ответить на ваши вопросы.
+                                Купить ворота и автоматику у нас Вы можете за наличный и безналичный расчёт с НДС и без НДС.
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="cards-wrap fl-wrap">
+                    <div class="row">
+                        <!--card item -->
+                        <div class="col-md-4">
+                            <a class="content-inner fl-wrap" href="#">
+                                <div class="content-front">
+                                    <div class="cf-inner">
+                                        <div class="inner">
+                                            <div class="dec-icon">
+                                                <i class="fal fa-tools"></i>
+                                            </div>
+                                            <h2>Профессиональная команда</h2>
+                                            <p>
+                                                Квалифицированный монтажный сервис. Опыт установки автоматических ворота более 10 лет. 
+                                            </p>
+                                        </div>
+                                        <div class="serv-num">01.</div>
+                                    </div>
+                                </div>
+                                <div class="content-back">
+                                    <div class="overlay"></div>
+
+                                </div>
+                            </a>
+                        </div>
+                        <!--card item end -->
+                        <!--card item -->
+                        <div class="col-md-4">
+                            <a class="content-inner fl-wrap" href="serv-single.html">
+                                <div class="content-front">
+                                    <div class="cf-inner">
+                                        <div class="inner">
+                                            <div class="dec-icon">
+                                                <i class="fal fa-truck-plow"></i>
+                                            </div>
+                                            <h2>Гарантии</h2>
+                                            <p>
+                                                Сервисное обслуживание устанавливаемой нами продукции. Сезонная регулировка и настройка автоматических систем.
+                                            </p>
+                                        </div>
+                                        <div class="serv-num">02.</div>
+                                    </div>
+                                </div>
+                                <div class="content-back">
+                                    <div class="overlay"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--card item end -->
+                        <!--card item -->
+                        <div class="col-md-4">
+                            <a class="content-inner fl-wrap" href="serv-single.html">
+                                <div class="content-front">
+                                    <div class="cf-inner">
+                                        <div class="inner">
+                                            <div class="dec-icon">
+                                                <i class="fal fa-pencil-ruler"></i>
+                                            </div>
+                                            <h2>Замер и консультация</h2>
+                                            <p>
+                                                Вызов специалиста на замер и консультацию бесплатно.
+                                                Произведем расчет на месте и оговорим сроки изготовления.
+                                            </p>
+                                        </div>
+                                        <div class="serv-num">03.</div>
+                                    </div>
+                                </div>
+                                <div class="content-back">
+                                    <div class="overlay"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--card item end -->
+                    </div>
+                </div>
+            </div>
+            <div class="hex-bg"><span class="hex hex1"></span><span class="hex hex2"></span><span class="hex hex3"></span></div>
+        </section>
+        <!--section end-->
+        <!--section -->
+        <section class="no-padding darkbg_2">
+            <div class="notifer-block fl-wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <h4><span>Хотите узнать больше информации о наших услугах?</span></h4>
+                        </div>
+                        <div class="col-md-5">
+                            <a href="{% url 'show_services' %}" class="nb_btn color-bg">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-canvas-wrap">
+                    <div class="dots gallery__dots" data-dots=""></div>
+                </div>
+            </div>
+        </section>
+        <!--about end   -->
+        <!--section -->
+        <section data-scrollax-parent="true">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="about-title fl-wrap">
+                            <h2 class="con-heading">О нас</h2>
+                        </div>
+                        <div class="about-wrap">
+                            <p>
+                                ООО «АВР» - Основана в 2014 году. Специализируемся на продаже и установке автоматических ворота, секционных ворот, роль ставен, шлагбаумов, гаражных ворот на ручном и автоматическом приводе всех существующих на рынке России производителей. Являемся официальными представителями российского бренда Дорхан (Doorhan). Имеем опыт установки и обслуживания промышленных въездных автоматизированных систем. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6">
+                        <div class="about-img fl-wrap">
+                            <img src="{% static 'images/folio/1.jpg' %}" class="respimg" alt="">
+                            <div class="about-img-title ait_2 color-bg" data-scrollax="properties: { translateY: '100px' }">ООО "АВР"</div>
+                        </div>
+                        <div class="hero-counter_wrap darkbg_2">
+                            <div class="hero-counter-slider">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <!--hc_item  --> 
+                                        <div class="swiper-slide">
+                                            <div class="hc_item fl-wrap">
+                                                <div class="hc-item_num">700 +</div>
+                                                <div class="hc-item_title">Ворот</div>
+                                            </div>
+                                        </div>
+                                        <!--hc_item end   -->
+                                        <!--hc_item  -->
+                                        <div class="swiper-slide">
+                                            <div class="hc_item fl-wrap">
+                                                <div class="hc-item_num">1500 +</div>
+                                                <div class="hc-item_title">Автоматики</div>
+                                            </div>
+                                        </div>
+                                        <!--hc_item end   -->
+                                        <!--hc_item  -->
+                                        <div class="swiper-slide">
+                                            <div class="hc_item fl-wrap">
+                                                <div class="hc-item_num">2500 +</div>
+                                                <div class="hc-item_title">Рольставней</div>
+                                            </div>
+                                        </div>
+                                        <!--hc_item end   -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero-counter-cont_wrap ">
+                                <div class="hcc_btn hcc-prev"><i class="fas fa-caret-left"></i></div>
+                                <div class="hcc_btn hcc-next"><i class="fas fa-caret-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sq-secdec"></div>
+        </section>
+        <section class="no-padding">
+            <div class="half-carousel-wrap">
+                <div class="half-carousel-title darkbg_2">
+                    <div class="half-carousel-title-item fl-wrap">
+                        <h2>Наше портфоли</h2>
+                        <a href="{% url 'show_portfolio' %}" class="hc_btn color-bg"><span>Все проекты</span></a>
+                    </div>
+                    <div class="sec-dec"></div>
+                </div>
+                <div class="half-carousel-conatiner">
+                    <div class="half-carousel fl-wrap full-height">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                {% for item in portfolio %}
+                                <div class="swiper-slide">
+                                    <div class="half-carousel-item fl-wrap">
+                                        <div class="bg-wrap bg-parallax-wrap-gradien">
+                                            <div class="bg" data-bg="{{ item.picture.url }}" data-swiper-parallax="10%"></div>
+                                        </div>
+                                        <div class="hc-counter color-bg">.0{{ forloop.counter }}</div>
+                                        <div class="half-carousel-content">
+                                            <h3><a href="portfolio-single.html">{{ item.title }}</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hcw_btn hcw-cont-prev"><i class="fas fa-caret-left"></i></div>
+                    <div class="hcw_btn hcw-cont-next"><i class="fas fa-caret-right"></i></div>
+                </div>
+            </div>
+        </section>
+        <section class="gray-bg  ">
+            <div class="hex-bg"><span class="hex hex1"></span><span class="hex hex2"></span><span class="hex hex3"></span></div>
+            <div class="hex-bg hex-bg2"><span class="hex hex1"></span><span class="hex hex2"></span><span class="hex hex3"></span></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="section-title align-text">
+                            <h2>Почему Вы должны выбрать нас?</h2>
+                            <div class="st-text fl-wrap">
+                                <p>
+                                    Учитывая то, что на рынке по установке автоматических ворота, роль ставен, гаражных ворот и автоматики в частности, большая конкуренция. Выделяем ряд преимуществ нашей компании перед конкурентами, которые служат своего рода устными гарантиями перед вами
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="col-md-6">
+                            <div class="card-item fl-wrap">
+                                <i class="fal fa-wind-turbine"></i>
+                                <span class="card-item_num">01.</span>
+                                <h4>Цена</h4>
+                                <p>Дилерские цены, без посредников и лишних накруток.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-item fl-wrap">
+                                <i class="fal fa-microchip"></i>
+                                <span class="card-item_num">02.</span>
+                                <h4>Контроль</h4>
+                                <p>Строгий контроль выполнения работ по монтажу.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-item fl-wrap">
+                                <i class="fal fa-tools"></i>
+                                <span class="card-item_num">03.</span>
+                                <h4>Гарантия</h4>
+                                <p>Помимо заводской гарантии даём личную гарантию на монтажные работы.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-item fl-wrap">
+                                <i class="fal fa-user-hard-hat"></i>
+                                <span class="card-item_num">04.</span>
+                                <h4>Обслуживание</h4>
+                                <p>Выбрав нас, вы получаете бессрочное обслуживание установленной нами продукции.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

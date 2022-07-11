@@ -1,0 +1,124 @@
+{% extends 'baseapp/category/base_category.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="content">
+    <section class="no-padding" data-scrollax-parent="true">
+        <div class="parallax-inner page-title-wrap">
+            <div class="bg" data-bg="{% static 'images/as_banner/3.jpg' %}" data-scrollax="properties: { translateY: '40%' }"></div>
+            <div class="parallax-wrap">
+                <div class="container">
+                    <div class="page-title">
+                        <h3>{{ category.title }}</h3>
+                    </div>
+                    <div class="hero-scroll-down-notifer  ">
+                        <div class="scroll-down-wrap ">
+                        </div>
+                    </div>
+                    <div class="pw_dec"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="breadcrumbs fl-wrap">
+        <div class="container">
+            <div class="breadcrumbs-list">
+                <a href="{% url 'show_index_page' %}">Главная</a>
+                <a href="{% url 'show_private_client_page' %}">{{ category.parent_category.title }}</a>
+                <span>{{ category.title }}</span>
+            </div>
+        </div>
+    </div>
+    <section data-scrollax-parent="true">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="about-title fl-wrap">
+                        <h2 class="con-heading">{{ category.title }}</h2>
+                    </div>
+                    <div class="about-wrap">
+                        <p>{{ category.description | linebreaksbr }}</p>
+                        <a href="#need_consultation" class="btn float-btn"><span>Заказать товар</span></a>
+                        {% comment %} <a href="#" class="btn as-btn-white"><span>Заказать товар</span></a> {% endcomment %}
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <div class="about-img fl-wrap">
+                        <img src="{% if category.picture %}{{ category.picture.url }}{% else %}{% static 'images/folio/1.jpg' %}{% endif %}" class="respimg" alt="{{ category.title }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gray-bg small-top_padding stp-bot">
+        <div class="hex-bg"><span class="hex hex1"></span><span class="hex hex2"></span><span class="hex hex3"></span></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="fl-wrap post-container">
+                        <!-- post-->
+                        <article class="post single-post">
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title"><a href="#">Конструкция секционных ворот Doorhan для гаража
+                                </a></h4>
+                                <div class="clearfix"></div>
+                                <ol class="as-list-decimal">
+                                    <li class="as-li-left">Ригель из стали с верхним уплотнителем по контуру</li>
+                                    <li class="as-li-left">Контурные боковые многокамерные уплотнители</li>
+                                    <li class="as-li-left">Нижний встраиваемый профиль из стали с терморазделением и уплотнителем</li>
+                                    <li class="as-li-left">Верхний угловой кронштейн</li>
+                                    <li class="as-li-left">Роликодержатель при боковой опоре</li>
+                                    <li class="as-li-left">Роликодержатель с нижним угловым кронштейном</li>
+                                    <li class="as-li-left">Внутренняя петля</li>
+                                    <li class="as-li-left">Вертикальная направляющая</li>
+                                    <li class="as-li-left">Горизонтальная направляющая</li>
+                                    <li class="as-li-left">Дистанционный С-профиль</li>
+                                    <li class="as-li-left">Сэндвич-панель</li>
+                                    <li class="as-li-left">Кронштейн крепления двойного шкива</li>
+                                    <li class="as-li-left">Кронштейн Г-образный для крепления к потолку, устанавливаемый на кронштейн произвольной фиксации</li>
+                                    <li class="as-li-left">Ручка для подъема</li>
+                                    <li class="as-li-left">Задвижка (опционально)</li>
+                                    <li class="as-li-left">Пружины растяжения</li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                                
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title"><a href="#">Способы монтажа гаражных ворот ДорХан</a></h4>
+                                <div class="clearfix"></div>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Классический типа монтажа (накладной), когда с внутренней стороны проема на простенки устанавливается система направляющих.</li>
+                                    <li class="as-li-left">Встроенный монтаж встык (отсутствуют простенки), когда несущий наличник монтируется стык в стык на проем, а система направляющих устанавливается поверх. Неровности стен нивелируются благодаря регулируемым кронштейнам.</li>
+                                    <li class="as-li-left">Встроенный монтаж внахлест (отсутствуют простенки), когда несущий наличник монтируется внахлест на проем, а система направляющих монтируется на него поверх. Неровности стен нивелируются благодаря регулируемым кронштейнам.</li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                            </div>
+
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title"><a href="#">Преимущества автоматических секционных гаражных ворот</a></h4>
+                                <div class="clearfix"></div>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Безопасность. Особенности конструкции исключают возникновение нестандартных ситуаций. Вашему транспортному средству ничего не угрожает, так как ворота не начнут опускаться самопроизвольно. Изготовление осуществляется на технологичном оборудовании, следовательно, все изделия отвечают высоким критериям безопасности.</li>
+                                    <li class="as-li-left">Бесшумность. Автоматические ограждения открываются бесшумно, плавно поднимаясь вверх и постепенно подгибаясь, становятся практически незаметными.</li>
+                                    <li class="as-li-left">Автоматическое управление. Компания-производитель DoorHan предусмотрела несколько вариантов управления для наибольшего комфорта пользователей. Манипулирование воротами осуществляется дистанционно через пульт, а также вручную, что очень удобно при внезапном отключении электричества.</li>
+                                    <li class="as-li-left">Звуко- и теплоизоляция. Современная конструкция от «ДорХан» надежно герметизирует проем, снижает уровень шума, проникающего извне, избавляет от сквозняка.</li>
+                                    <li class="as-li-left">Эстетичность. Высокотехнологичное производство позволило создать уникальный продукт, который сочетает в себе надежность и стиль, поэтому секционные ограждения дополнят любой экстерьер.</li>
+                                    <li class="as-li-left">Мы напрямую поставляем товары от производителя DoorHan. Благодаря отсутствию посредников у нас прозрачная стоимость изготовления, монтажа гаражных ворот в Белгороде. По вопросам заказов звоните или обращайтесь через сайт.</li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="fl-wrap limit-box"></div>
+        </div>
+    </section>
+
+
+</div>
+
+{{ block.super }}
+{% endblock %}

@@ -1,0 +1,120 @@
+{% extends 'baseapp/category/base_category.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="content">
+    <section class="no-padding" data-scrollax-parent="true">
+        <div class="parallax-inner page-title-wrap">
+            <div class="bg" data-bg="{% static 'images/as_banner/3.jpg' %}" data-scrollax="properties: { translateY: '40%' }"></div>
+            <div class="parallax-wrap">
+                <div class="container">
+                    <div class="page-title">
+                        <h3>{{ category.title }}</h3>
+                    </div>
+                    <div class="hero-scroll-down-notifer  ">
+                        <div class="scroll-down-wrap ">
+                        </div>
+                    </div>
+                    <div class="pw_dec"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="breadcrumbs fl-wrap">
+        <div class="container">
+            <div class="breadcrumbs-list">
+                <a href="{% url 'show_index_page' %}">Главная</a>
+                <a href="{% url 'show_corporate_client_page' %}">{{ category.parent_category.title }}</a>
+                <span>{{ category.title }}</span>
+            </div>
+        </div>
+    </div>
+    <section data-scrollax-parent="true">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="about-title fl-wrap">
+                        <h2 class="con-heading">{{ category.title }}</h2>
+                    </div>
+                    <div class="about-wrap">
+                        <p>{{ category.description | linebreaksbr }}</p>
+                        <a href="#need_consultation" class="btn float-btn"><span>Заказать товар</span></a>
+                        {% comment %} <a href="#" class="btn as-btn-white"><span>Заказать товар</span></a> {% endcomment %}
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <div class="about-img fl-wrap">
+                        <img src="{% if category.picture %}{{ category.picture.url }}{% else %}{% static 'images/folio/1.jpg' %}{% endif %}" class="respimg" alt="{{ category.title }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gray-bg small-top_padding stp-bot">
+        <div class="hex-bg"><span class="hex hex1"></span><span class="hex hex2"></span><span class="hex hex3"></span></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="fl-wrap post-container">
+                        <!-- post-->
+                        <article class="post single-post">
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Разновидности промышленных ворот</h4>
+                                <div class="clearfix"></div>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Распашные. Самый простой вариант DoorHan, предполагающий открытие створок вручную. Для повышения комфорта такие промышленные ворота оборудуют механизмом с гидравлическим либо электроприводом.</li>
+                                    <li class="as-li-left">Секционные. Их полотно из сэндвич-панелей разделено на секции. Запирание и отпирание ограждений промышленного назначения осуществляется с помощью подвижно-силового механизма.</li>
+                                    <li class="as-li-left">Откатные. Монолитное полотно может сдвигаться влево, вправо и даже в обе стороны. Чаще всего в таких ограждениях для промышленных предприятий используется подвесной щит, который перемещается на приводимых в действие электромотором роликах.</li>
+                                    <li class="as-li-left">Складные. Состоят из вертикальных секций, которые при отпирании собираются в виде гармошки. Они отъезжают в правую, левую сторону или сразу в обе, освобождая проем для проезда.</li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Конструкция промышленных ворот для склада</h4>
+                                <div class="clearfix"></div>
+                                <p>
+                                    Сложившаяся практика производства ограждений ДорХан предопределила основные конструкции. Допускается их видоизменение в части габаритов, геометрии. 
+                                    Однако основополагающий принцип их разработки и монтажа един. Простейшее строение присуще распашным воротным системам. Они состоят из рамы, 
+                                    полотна, замка, центрального ловителя, щеточного уплотнителя, ригельной задвижки. Складные модели имеют другое строение: отклоняющую систему, 
+                                    стальную роликовую опору, стойку крепления полотна, шиповой уплотнитель. Стойка крепится кронштейнами.
+                                </p>
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Из чего складывается стоимость ворот</h4>
+                                <div class="clearfix"></div>
+                                <p>
+                                    Итоговая цена на промышленные ворота в комплекте складывается под влиянием таких факторов, как:
+                                </p>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Размеры – чем больше полотно, тем больше конечная стоимость ограждений DoorHan</li>
+                                    <li class="as-li-left">Механизм управления – автоматические ворота обходятся дороже тех, что без автоматики</li>
+                                    <li class="as-li-left">Материал полотна – цены на сэндвич-панели, стальные листы гладкие и с гофрированием различны</li>
+                                    <li class="as-li-left">Дополнительный функционал – если нужны дверь, калитка, окно, привод для автоматизации, стоимость увеличивается</li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Почему выгодно купить ограждения у нас</h4>
+                                <div class="clearfix"></div>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Все автоматические ворота ДорХан протестированы на прочность. Их качество соответствует российским и европейским стандартам, что отражено в сертификатах</li>
+                                    <li class="as-li-left">Большой выбор моделей. У нас имеются ограждения для любых объектов: откатные, распашные, секционные, складные</li>
+                                    <li class="as-li-left">Выгодные предложения. У нас нет наценок, поскольку мы не взаимодействуем с посредниками</li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="fl-wrap limit-box"></div>
+        </div>
+    </section>
+
+
+</div>
+
+{{ block.super }}
+{% endblock %}

@@ -1,0 +1,126 @@
+{% extends 'baseapp/category/base_category.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="content">
+    <section class="no-padding" data-scrollax-parent="true">
+        <div class="parallax-inner page-title-wrap">
+            <div class="bg" data-bg="{% static 'images/as_banner/3.jpg' %}" data-scrollax="properties: { translateY: '40%' }"></div>
+            <div class="parallax-wrap">
+                <div class="container">
+                    <div class="page-title">
+                        <h3>{{ category.title }}</h3>
+                    </div>
+                    <div class="hero-scroll-down-notifer  ">
+                        <div class="scroll-down-wrap ">
+                        </div>
+                    </div>
+                    <div class="pw_dec"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="breadcrumbs fl-wrap">
+        <div class="container">
+            <div class="breadcrumbs-list">
+                <a href="{% url 'show_index_page' %}">Главная</a>
+                <a href="{% url 'show_private_client_page' %}">{{ category.parent_category.title }}</a>
+                <span>{{ category.title }}</span>
+            </div>
+        </div>
+    </div>
+    <section data-scrollax-parent="true">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="about-title fl-wrap">
+                        <h2 class="con-heading">{{ category.title }}</h2>
+                    </div>
+                    <div class="about-wrap">
+                        <p>{{ category.description | linebreaksbr }}</p>
+                        <a href="#need_consultation" class="btn float-btn"><span>Заказать товар</span></a>
+                        {% comment %} <a href="#" class="btn as-btn-white"><span>Заказать товар</span></a> {% endcomment %}
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <div class="about-img fl-wrap">
+                        <img src="{% if category.picture %}{{ category.picture.url }}{% else %}{% static 'images/folio/1.jpg' %}{% endif %}" class="respimg" alt="{{ category.title }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gray-bg small-top_padding stp-bot">
+        <div class="hex-bg"><span class="hex hex1"></span><span class="hex hex2"></span><span class="hex hex3"></span></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="fl-wrap post-container">
+                        <!-- post-->
+                        <article class="post single-post">
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Комплект автоматического шлагбаума</h4>
+                                <div class="clearfix"></div>
+                                <p>
+                                    Какой бы ни была цена автоматического шлагбаума, в его комплект во всех случаях включают:
+                                </p>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Стрелу с резиновыми накладками, надежную стойку</li>
+                                    <li class="as-li-left">Монтажное основание и пульт управления</li>
+                                    <li class="as-li-left">Крепеж для разных частей конструкции</li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                                <p>
+                                    Продукцию ДорХан снабжают балансировочными пружинами. Если длина стрелы составляет более 4 м, устойчивость комплекта увеличивается. Стрелу 
+                                    производят из прочного алюминия, затем дополняют ребрами жесткости. Чтобы защитить конструкцию от ветра, инженеры предусматривают скругленные 
+                                    грани. Как правило, длина стрелы составляет 3–6 м. Внутри стойки можно поместить вентилятор. Автоматические шлагбаумы марки DoorHan мягко 
+                                    останавливается в любом крайнем положении. Это возможно даже тогда, когда скорость работы техники остается высокой. Нагрузка распределяется 
+                                    равномерно благодаря используемым шестеренкам. Также производителем предусмотрена возможность ручного управления при помощи встроенного 
+                                    расцепителя.
+                                </p>
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Способы монтажа</h4>
+                                <div class="clearfix"></div>
+                                <p>
+                                    Шлагбаумы устанавливают на бетонном основании. Для надежного закрепления конструкции используют анкерные болты.
+                                    Глубина, на которой помещают стойку, зависит от вида грунта и уровня промерзания почвы.
+                                </p>
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Преимущества автоматических шлагбаумов DoorHan</h4>
+                                <div class="clearfix"></div>
+                                <p>
+                                    Оборудование ДорХан имеет следующие достоинства:
+                                </p>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Высокую пропускную способность при бесперебойной работе</li>
+                                    <li class="as-li-left">Предоставление свободной дороги пешеходам</li>
+                                    <li class="as-li-left">Хороший обзор территории</li>
+                                    <li class="as-li-left">Защиту от вандалов</li>
+                                    <li class="as-li-left">Установку под ключ с выбором многочисленных опций</li>
+                                    <li class="as-li-left">Возможность разблокировки въезда вручную при отключении электроснабжения</li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                                <p>
+                                    Представленные в каталоге модели предназначены для интенсивной работы при любых погодных условиях. Светоотражающие накладки помогают
+                                    круглосуточно контролировать транспортный поток. Современные ограждения также снижают риск получения травм и вероятность аварийных ситуаций.
+                                    Подходящую модель можно приобрести в Курске при обращении в нашу компанию.
+                                </p>
+                               
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="fl-wrap limit-box"></div>
+        </div>
+    </section>
+
+
+</div>
+
+{{ block.super }}
+{% endblock %}

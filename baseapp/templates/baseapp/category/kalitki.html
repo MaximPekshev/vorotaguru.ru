@@ -1,0 +1,113 @@
+{% extends 'baseapp/category/base_category.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="content">
+    <section class="no-padding" data-scrollax-parent="true">
+        <div class="parallax-inner page-title-wrap">
+            <div class="bg" data-bg="{% static 'images/as_banner/3.jpg' %}" data-scrollax="properties: { translateY: '40%' }"></div>
+            <div class="parallax-wrap">
+                <div class="container">
+                    <div class="page-title">
+                        <h3>{{ category.title }}</h3>
+                    </div>
+                    <div class="hero-scroll-down-notifer  ">
+                        <div class="scroll-down-wrap ">
+                        </div>
+                    </div>
+                    <div class="pw_dec"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="breadcrumbs fl-wrap">
+        <div class="container">
+            <div class="breadcrumbs-list">
+                <a href="{% url 'show_index_page' %}">Главная</a>
+                <a href="{% url 'show_private_client_page' %}">{{ category.parent_category.title }}</a>
+                <span>{{ category.title }}</span>
+            </div>
+        </div>
+    </div>
+    <section data-scrollax-parent="true">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="about-title fl-wrap">
+                        <h2 class="con-heading">{{ category.title }}</h2>
+                    </div>
+                    <div class="about-wrap">
+                        <p>{{ category.description | linebreaksbr }}</p>
+                        <a href="#need_consultation" class="btn float-btn"><span>Заказать товар</span></a>
+                        {% comment %} <a href="#" class="btn as-btn-white"><span>Заказать товар</span></a> {% endcomment %}
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <div class="about-img fl-wrap">
+                        <img src="{% if category.picture %}{{ category.picture.url }}{% else %}{% static 'images/folio/1.jpg' %}{% endif %}" class="respimg" alt="{{ category.title }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gray-bg small-top_padding stp-bot">
+        <div class="hex-bg"><span class="hex hex1"></span><span class="hex hex2"></span><span class="hex hex3"></span></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="fl-wrap post-container">
+                        <!-- post-->
+                        <article class="post single-post">
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Комплектация калиток</h4>
+                                <div class="clearfix"></div>
+                                <p>
+                                    Уличная калитка подходит для установки в любые ограждения и заборные секции.
+                                    Она может использоваться на даче, в загородном доме или на садовом участке, а еще на складе и производственном комплексе.
+                                    Для гармонии экстерьера такая конструкция изготавливается в едином стиле с забором и воротами, производятся с право- и левосторонним открыванием,
+                                    наружу либо внутрь участка. Подбирая ее для оформления территории, нужно учитывать технические характеристики и размеры сопутствующих ворот.
+                                </p>
+                                <p>
+                                    Изделия поставляются в готовом комплекте и оснащаются на выбор врезным механическим или электромеханическим замком.
+                                </p>
+                                <p>
+                                    В базовую поставку входят:
+                                </p>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Навесные алюминиевые столбы для крепления створки к проему</li>
+                                    <li class="as-li-left">Профильный лист и профили для сборки створки или створка из сэндвич-панелей в раме из алюминиевых профилей</li>
+                                    <li class="as-li-left">Коробка с комплектацией для монтажа</li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                                
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Преимущества уличных калиток «ДорХан»:</h4>
+                                <div class="clearfix"></div>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Эстетичный вид, более 100 вариантов дизайнерского исполнения</li>
+                                    <li class="as-li-left">Легкая и надежна конструкция из прочных и качественных материалов</li>
+                                    <li class="as-li-left">Высокая устойчивость металлических элементов к коррозии благодаря порошковому покрытию, соответствующему стандарту Qualicoat</li>
+                                    <li class="as-li-left">Комплектация износостойкими алюминиевыми петлями с возможностью регулировки</li>
+                                    <li class="as-li-left">Быстрый монтаж без дополнительного оборудования</li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                                <p>
+                                    Проконсультироваться, рассчитать стоимость и заказать уличные калитки «ДорХан» можно по телефону или через отправку заявки на электронную почту.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="fl-wrap limit-box"></div>
+        </div>
+    </section>
+
+
+</div>
+
+{{ block.super }}
+{% endblock %}

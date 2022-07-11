@@ -1,0 +1,19 @@
+.as-list-decimal {
+    list-style-type: decimal;
+}
+
+.as-list-dot {
+    list-style-type: disc;
+}
+
+.as-li-left {
+    text-align: left;
+}
+
+.pt-0 {
+    padding-top: 0px;
+}
+
+.pl-3 {
+    padding-left: 30px;
+}

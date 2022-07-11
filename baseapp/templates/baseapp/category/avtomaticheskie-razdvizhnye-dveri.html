@@ -1,0 +1,104 @@
+{% extends 'baseapp/category/base_category.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="content">
+    <section class="no-padding" data-scrollax-parent="true">
+        <div class="parallax-inner page-title-wrap">
+            <div class="bg" data-bg="{% static 'images/as_banner/3.jpg' %}" data-scrollax="properties: { translateY: '40%' }"></div>
+            <div class="parallax-wrap">
+                <div class="container">
+                    <div class="page-title">
+                        <h3>{{ category.title }}</h3>
+                    </div>
+                    <div class="hero-scroll-down-notifer  ">
+                        <div class="scroll-down-wrap ">
+                        </div>
+                    </div>
+                    <div class="pw_dec"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="breadcrumbs fl-wrap">
+        <div class="container">
+            <div class="breadcrumbs-list">
+                <a href="{% url 'show_index_page' %}">Главная</a>
+                <a href="{% url 'show_corporate_client_page' %}">{{ category.parent_category.title }}</a>
+                <span>{{ category.title }}</span>
+            </div>
+        </div>
+    </div>
+    <section data-scrollax-parent="true">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="about-title fl-wrap">
+                        <h2 class="con-heading">{{ category.title }}</h2>
+                    </div>
+                    <div class="about-wrap">
+                        <p>{{ category.description | linebreaksbr }}</p>
+                        <a href="#need_consultation" class="btn float-btn"><span>Заказать товар</span></a>
+                        {% comment %} <a href="#" class="btn as-btn-white"><span>Заказать товар</span></a> {% endcomment %}
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <div class="about-img fl-wrap">
+                        <img src="{% if category.picture %}{{ category.picture.url }}{% else %}{% static 'images/folio/1.jpg' %}{% endif %}" class="respimg" alt="{{ category.title }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gray-bg small-top_padding stp-bot">
+        <div class="hex-bg"><span class="hex hex1"></span><span class="hex hex2"></span><span class="hex hex3"></span></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="fl-wrap post-container">
+                        <!-- post-->
+                        <article class="post single-post">
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Преимущества автоматических раздвижных дверей</h4>
+                                <div class="clearfix"></div>
+                                <p>
+                                    Большая популярность конструкций обусловлена их удобством. Особенно это актуально в местах с большой проходимостью. Автоматические раздвижные 
+                                    двери могут устанавливаться в качестве входной группы или монтироваться во внутренних помещениях. Для обеспечения безопасности конструкции 
+                                    комплектуются различными датчиками, предотвращающими закрытие дверей, если в проеме находятся люди или расположен какой-либо предмет. 
+                                    Чувствительные фотоэлементы отличаются быстротой реакции, в связи с чем открытие дверей не заставляет долго ждать. Высокая надежность автоматики, 
+                                    рассчитанная на интенсивные нагрузки, позволяет раздвижным дверям безотказно работать на протяжении длительного времени.
+                                </p>
+                                <span class="fw-separator fl-wrap"></span>
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Конструкция автоматических раздвижных дверей</h4>
+                                <div class="clearfix"></div>
+                                <p>
+                                    Автоматические раздвижные двери состоят:
+                                </p>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Из полотна. Как правило, оно выполнено из прочного материала, отличающегося высокими показателями надежности и долговечности. Технические двери чаще всего выполняются из металла.</li>
+                                    <li class="as-li-left">Направляющих. С помощью этих элементов полотно перемещается, открывая или закрывая дверной проем.</li>
+                                    <li class="as-li-left">
+                                        Электронной системы управления. Приведение дверей в действие осуществляется с помощью датчиков. Они улавливают присутствие человека и 
+                                        передают сигнал автоматике, которая производит открытие дверей. Большинство конструкций имеет несколько режимов работы и набор дополнительных функций, 
+                                        например определяет расстояние до человека, время нахождения дверей в открытом состоянии и прочие.
+                                    </li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="fl-wrap limit-box"></div>
+        </div>
+    </section>
+
+
+</div>
+
+{{ block.super }}
+{% endblock %}

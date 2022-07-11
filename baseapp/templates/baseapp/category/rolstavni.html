@@ -1,0 +1,144 @@
+{% extends 'baseapp/category/base_category.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="content">
+    <section class="no-padding" data-scrollax-parent="true">
+        <div class="parallax-inner page-title-wrap">
+            <div class="bg" data-bg="{% static 'images/as_banner/3.jpg' %}" data-scrollax="properties: { translateY: '40%' }"></div>
+            <div class="parallax-wrap">
+                <div class="container">
+                    <div class="page-title">
+                        <h3>{{ category.title }}</h3>
+                    </div>
+                    <div class="hero-scroll-down-notifer  ">
+                        <div class="scroll-down-wrap ">
+                        </div>
+                    </div>
+                    <div class="pw_dec"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="breadcrumbs fl-wrap">
+        <div class="container">
+            <div class="breadcrumbs-list">
+                <a href="{% url 'show_index_page' %}">Главная</a>
+                <a href="{% url 'show_private_client_page' %}">{{ category.parent_category.title }}</a>
+                <span>{{ category.title }}</span>
+            </div>
+        </div>
+    </div>
+    <section data-scrollax-parent="true">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="about-title fl-wrap">
+                        <h2 class="con-heading">{{ category.title }}</h2>
+                    </div>
+                    <div class="about-wrap">
+                        <p>{{ category.description | linebreaksbr }}</p>
+                        <a href="#need_consultation" class="btn float-btn"><span>Заказать товар</span></a>
+                        {% comment %} <a href="#" class="btn as-btn-white"><span>Заказать товар</span></a> {% endcomment %}
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <div class="about-img fl-wrap">
+                        <img src="{% if category.picture %}{{ category.picture.url }}{% else %}{% static 'images/folio/1.jpg' %}{% endif %}" class="respimg" alt="{{ category.title }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gray-bg small-top_padding stp-bot">
+        <div class="hex-bg"><span class="hex hex1"></span><span class="hex hex2"></span><span class="hex hex3"></span></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="fl-wrap post-container">
+                        <!-- post-->
+                        <article class="post single-post">
+                            <div class="post-content fl-wrap">
+                                <div class="clearfix"></div>
+                                <p>
+                                    Установка рольставен позволит недорого приобрести взломостойкую и надежную конструкцию, которая прослужит долгие годы. Рольставни или роллеты подходят:
+                                </p>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Для дома, если использовать их в качестве гаражных ворот</li>
+                                    <li class="as-li-left">Для торговой площадки или павильона</li>
+                                    <li class="as-li-left">для установки в промышленном здании или на производстве</li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                                <p>
+                                    Мы предлагаем купить рольставни DOORHAN от проверенного производителя. Чтобы заказать их, можно оставить заявку на сайте или запросить обратный звонок, чтобы с вами связались наши специалисты.
+                                </p>
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Конструктивные особенности рольставней</h4>
+                                <div class="clearfix"></div>
+                                <p>
+                                    Рольставни, так же как и роллетные ворота, представляют собой гибкое ламельное полотно, которое при помощи привода наматывается на вал,
+                                    расположенный в коробе над окном. Полотно движется по установленным по краям проема направляющим. Эти защитные конструкции можно купить
+                                    для установки в жилых, коммерческих, складских, производственных помещениях. Роллеты могут устанавливаться на этапе строительства объектов
+                                    или на уже введенные в эксплуатацию здания как с внутренней, так и с внешней стороны. Наши специалисты подберут для вас оптимальный вид монтажа.
+                                    Некоторые из моделей оснащены дополнительной защитой от взлома.
+                                </p>
+                                <span class="fw-separator fl-wrap"></span>
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">От чего зависит стоимость роллет и рольставней DOORHAN</h4>
+                                <div class="clearfix"></div>
+                                <p>
+                                    Цена на конструкции рольставен зависит от материалов, размера и комплектации. Если в ваш заказ включена доставка и монтаж, они оплачиваются
+                                    отдельно. Рольставни «Дорхан» устанавливаются в проем, поэтому чем больше его площадь, тем выше будет стоимость.
+                                    Ворота могут быть механическими или автоматическими. В первом случае их потребуется открывать и закрывать вручную.
+                                    А во втором на роллеты будет установлен специальный привод с дистанционным управлением. Автоматизированные варианты будут стоить дороже.
+                                    Другим фактором является материал, из которого сделаны рольставни. Цена на них варьируется в зависимости от вида профилей.
+                                    Для того чтобы рассчитать итоговую стоимость покупки, свяжитесь с нами. Специалисты помогут подобрать оптимальный размер роллет
+                                    и проконсультируют вас по поводу расценок.
+                                </p>
+                                <span class="fw-separator fl-wrap"></span>
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Наш ассортимент</h4>
+                                <div class="clearfix"></div>
+                                <p>
+                                    Каждая рольставня изготавливается на заказ на современном оборудовании с учетом российских стандартов качества.
+                                    Полотно рольставней собирается из различных типов профилей: алюминиевых пенонаполненных, экструдированных, решетчатых, стальных.
+                                    Они окрашиваются в один из доступных цветов палитры RAL либо выполняются в дизайне под дерево. Рольставни могут оснащаться ручным ленточным,
+                                    шнуровым, кордовым, воротковым приводом или пружинно-инерционным механизмом, а также внутривальным электроприводом. Управлять автоматикой 
+                                    можно пультом ДУ, выключателем с ключом или обычным клавишным выключателем. На выбор роллеты комплектуются электроприводом с аварийным 
+                                    открыванием или без него. Первый тип позволяет управлять рольставнями при отключенном электричестве, используя петлю с воротком или кардан с 
+                                    воротком.
+                                </p>
+                                <span class="fw-separator fl-wrap"></span>
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Преимущества роллет ДорХан</h4>
+                                <div class="clearfix"></div>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Взломозащищенная уличная конструкция, большой выбор усиленных направляющих</li>
+                                    <li class="as-li-left">Наружные рольставни нетребовательны к исходным условиям и проемам</li>
+                                    <li class="as-li-left">Система скрытого крепления направляющих</li>
+                                    <li class="as-li-left">Эстетичный вид, позволяющий вписать рольставни в экстерьер здания</li>
+                                    <li class="as-li-left">Использование коррозионностойких материалов, обеспечивающих длительный срок службы конструкций</li>
+                                    <li class="as-li-left">Специальная система щеточных уплотнителей предотвращает попадание пыли в короб</li>
+                                    <li class="as-li-left">Высокое качество, подтвержденное сертификатами</li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="fl-wrap limit-box"></div>
+        </div>
+    </section>
+
+
+</div>
+
+{{ block.super }}
+{% endblock %}

@@ -1,0 +1,129 @@
+{% extends 'baseapp/category/base_category.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="content">
+    <section class="no-padding" data-scrollax-parent="true">
+        <div class="parallax-inner page-title-wrap">
+            <div class="bg" data-bg="{% static 'images/as_banner/3.jpg' %}" data-scrollax="properties: { translateY: '40%' }"></div>
+            <div class="parallax-wrap">
+                <div class="container">
+                    <div class="page-title">
+                        <h3>{{ category.title }}</h3>
+                    </div>
+                    <div class="hero-scroll-down-notifer  ">
+                        <div class="scroll-down-wrap ">
+                        </div>
+                    </div>
+                    <div class="pw_dec"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="breadcrumbs fl-wrap">
+        <div class="container">
+            <div class="breadcrumbs-list">
+                <a href="{% url 'show_index_page' %}">Главная</a>
+                <a href="{% url 'show_private_client_page' %}">{{ category.parent_category.title }}</a>
+                <span>{{ category.title }}</span>
+            </div>
+        </div>
+    </div>
+    <section data-scrollax-parent="true">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="about-title fl-wrap">
+                        <h2 class="con-heading">{{ category.title }}</h2>
+                    </div>
+                    <div class="about-wrap">
+                        <p>{{ category.description | linebreaksbr }}</p>
+                        <a href="#need_consultation" class="btn float-btn"><span>Заказать товар</span></a>
+                        {% comment %} <a href="#" class="btn as-btn-white"><span>Заказать товар</span></a> {% endcomment %}
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <div class="about-img fl-wrap">
+                        <img src="{% if category.picture %}{{ category.picture.url }}{% else %}{% static 'images/folio/1.jpg' %}{% endif %}" class="respimg" alt="{{ category.title }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gray-bg small-top_padding stp-bot">
+        <div class="hex-bg"><span class="hex hex1"></span><span class="hex hex2"></span><span class="hex hex3"></span></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="fl-wrap post-container">
+                        <!-- post-->
+                        <article class="post single-post">
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Конструкция рольворот</h4>
+                                <div class="clearfix"></div>
+                                <p>
+                                    Цена рулонных ворот зависит от их размеров, способа монтажа и материалов профилей. В стоимость также может входить услуга доставки и установки конструкции.
+                                    Стандартный комплект деталей, из которых состоят гаражные или уличные рольворота:
+                                </p>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Боковая крышка RSK300, RK375</li>
+                                    <li class="as-li-left">Защитный короб RBN300, RBN375</li>
+                                    <li class="as-li-left">Направляющий ролик RV77</li>
+                                    <li class="as-li-left">Пла стина под крепление привода BU100K</li>
+                                    <li class="as-li-left">Боковой замок SL75</li>
+                                    <li class="as-li-left">Профиль направляющий RG90E</li>
+                                    <li class="as-li-left">Внутривальный электропривод</li>
+                                    <li class="as-li-left">Октагональный вал RV102</li>
+                                    <li class="as-li-left">Универсальная капсула KPU102</li>
+                                    <li class="as-li-left">Подшипник BS32</li>
+                                    <li class="as-li-left">Профиль RHS75, RHS75P, RH77M, RHE56M, RHE56GM.</li>
+                                </ol>
+                                <p>
+                                    Рольворота «Дорхан» являются долговечными и надежными.
+                                </p>
+                                <span class="fw-separator fl-wrap"></span>
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Способы монтажа уличных или гаражных рольворот</h4>
+                                <div class="clearfix"></div>
+                                <p>
+                                    Чаще установка производится накладным способом, поскольку для монтажа рольворот от бренда DoorHan не нужна трудоемкая подготовка откосов. Ставни устанавливают над проемом.
+                                    Монтаж встроенным способом позволяет разместить все элементы рулонных ворот внутри ниши.
+                                </p>
+                                <span class="fw-separator fl-wrap"></span>
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Преимущества и особенности рулонных ворот DoorHan
+                                </h4>
+                                <div class="clearfix"></div>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Рулонные ставни – это надежная защита от влаги, пыли, а также от злоумышленников. В отличии от обычных решеток рольставни не требуют постоянной покраски</li>
+                                    <li class="as-li-left">Внешний вид конструкций легко дополнит дизайн любого строения</li>
+                                    <li class="as-li-left">Полотно рольворот складываются как в механическом, так и в автоматическом режимах</li>
+                                    <li class="as-li-left">Цена на роллетные ворота рассчитывается персонально для каждого заказа. Доступная стоимость конструкций делает их востребованными для различного типа помещений, гаражей, окон</li>
+                                    <li class="as-li-left">Современное экологичное решение, ведь все конструкции производятся не из дешевого недолговечного пластика, а из высокотехнологичных материалов и сплавов, а также стали и алюминия</li>
+                                    <li class="as-li-left">Автоматические ставни используются для любых оконных, дверных и гаражных проемов</li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                                <p>
+                                    Преимущества автоматических рулонных ворот можно обсуждать бесконечно. Долговечность и простой монтаж делает их
+                                    универсальным решением для любых типов проемов. На каждые ворота-рольставни цена рассчитывается индивидуально, в
+                                    зависимости от пожеланий заказчика. Все модели производитель окрашивает в заводских условиях, где функционирует оборудование
+                                    от ведущих европейских брендов.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="fl-wrap limit-box"></div>
+        </div>
+    </section>
+
+
+</div>
+
+{{ block.super }}
+{% endblock %}

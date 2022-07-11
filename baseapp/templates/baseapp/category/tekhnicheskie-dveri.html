@@ -1,0 +1,129 @@
+{% extends 'baseapp/category/base_category.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="content">
+    <section class="no-padding" data-scrollax-parent="true">
+        <div class="parallax-inner page-title-wrap">
+            <div class="bg" data-bg="{% static 'images/as_banner/3.jpg' %}" data-scrollax="properties: { translateY: '40%' }"></div>
+            <div class="parallax-wrap">
+                <div class="container">
+                    <div class="page-title">
+                        <h3>{{ category.title }}</h3>
+                    </div>
+                    <div class="hero-scroll-down-notifer  ">
+                        <div class="scroll-down-wrap ">
+                        </div>
+                    </div>
+                    <div class="pw_dec"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="breadcrumbs fl-wrap">
+        <div class="container">
+            <div class="breadcrumbs-list">
+                <a href="{% url 'show_index_page' %}">Главная</a>
+                <a href="{% url 'show_corporate_client_page' %}">{{ category.parent_category.title }}</a>
+                <span>{{ category.title }}</span>
+            </div>
+        </div>
+    </div>
+    <section data-scrollax-parent="true">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="about-title fl-wrap">
+                        <h2 class="con-heading">{{ category.title }}</h2>
+                    </div>
+                    <div class="about-wrap">
+                        <p>{{ category.description | linebreaksbr }}</p>
+                        <a href="#need_consultation" class="btn float-btn"><span>Заказать товар</span></a>
+                        {% comment %} <a href="#" class="btn as-btn-white"><span>Заказать товар</span></a> {% endcomment %}
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <div class="about-img fl-wrap">
+                        <img src="{% if category.picture %}{{ category.picture.url }}{% else %}{% static 'images/folio/1.jpg' %}{% endif %}" class="respimg" alt="{{ category.title }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gray-bg small-top_padding stp-bot">
+        <div class="hex-bg"><span class="hex hex1"></span><span class="hex hex2"></span><span class="hex hex3"></span></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="fl-wrap post-container">
+                        <!-- post-->
+                        <article class="post single-post">
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Конструкция</h4>
+                                <div class="clearfix"></div>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Петли стальные</li>
+                                    <li class="as-li-left">Шпингалет на пассивной створке</li>
+                                    <li class="as-li-left">Материал уплотнителя</li>
+                                    <li class="as-li-left">Полотно дверное</li>
+                                    <li class="as-li-left">Покрытие порошковое</li>
+                                    <li class="as-li-left">Створка пассивная</li>
+                                    <li class="as-li-left">Ручка из стали подпружиненная с покрытием негорючего типа «нейлон»</li>
+                                    <li class="as-li-left">Противопожарный универсальный замок под цилиндр</li>
+                                    <li class="as-li-left">Утеплитель и наполнитель</li>
+                                    <li class="as-li-left">Короб дверной</li>
+                                    <li class="as-li-left">Съемный порог из стали</li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Способы монтажа</h4>
+                                <div class="clearfix"></div>
+                                <p>
+                                    Накладной монтаж - один из самых распространенных способов монтажа технической двери ДорХан Иногда правила эвакуации предписывают 
+                                    устанавливать дверную конструкцию так, чтобы она открывалась лишь внутрь помещения. Это позволяет сделать дверная коробка 
+                                    внутреннего открывания. Изделие можно монтировать с возможностью открытия как во внутрь, так и наружу помещения, используя 
+                                    дверную коробку для врезного монтажа. Это делает двери универсальными для использования на разных объектах в Белгороде , 
+                                    даже при отсутствии простенков.
+                                </p>
+                                <span class="fw-separator fl-wrap"></span>
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Преимущества</h4>
+                                <div class="clearfix"></div>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Универсальная конструкция позволяет устанавливать технические двери ДорХан с правосторонним или левосторонним открыванием, она может быть с глухими полотном или остекленная. Это дает возможность использовать двери для школ, больниц, детских садов, а также промышленных и офисных помещений</li>
+                                    <li class="as-li-left">Компания-производитель изготавливает дверные блоки из высокотехнологичной стали, гарантирующей им прочность и долговечность</li>
+                                    <li class="as-li-left">Полотно усиленно профилями из стали, а замковая система снабжена надежным цилиндрическим механизмом</li>
+                                    <li class="as-li-left">Доступная цена на наши изделия в Белгороде делает их актуальными для покупки строительными организациями с малым бюджетом</li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Технические достоинства
+                                </h4>
+                                <div class="clearfix"></div>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Свыше 500 000 циклов открывания/закрывания, длительный эксплуатационный срок</li>
+                                    <li class="as-li-left">Запатентованная технология производства полотен</li>
+                                    <li class="as-li-left">Изготовление из плотной оцинкованной стали, полотно внутри заполняется минераловатной плитой с особым коэффициентом плотности</li>
+                                    <li class="as-li-left">Окраска производится порошково-полимерным покрытием</li>
+                                    <li class="as-li-left">Технические двери DoorHan соответствуют классу взломостойкости М3</li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="fl-wrap limit-box"></div>
+        </div>
+    </section>
+
+
+</div>
+
+{{ block.super }}
+{% endblock %}

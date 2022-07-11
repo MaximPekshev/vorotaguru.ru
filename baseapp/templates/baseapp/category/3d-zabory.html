@@ -1,0 +1,129 @@
+{% extends 'baseapp/category/base_category.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="content">
+    <section class="no-padding" data-scrollax-parent="true">
+        <div class="parallax-inner page-title-wrap">
+            <div class="bg" data-bg="{% static 'images/as_banner/3.jpg' %}" data-scrollax="properties: { translateY: '40%' }"></div>
+            <div class="parallax-wrap">
+                <div class="container">
+                    <div class="page-title">
+                        <h3>{{ category.title }}</h3>
+                    </div>
+                    <div class="hero-scroll-down-notifer  ">
+                        <div class="scroll-down-wrap ">
+                        </div>
+                    </div>
+                    <div class="pw_dec"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="breadcrumbs fl-wrap">
+        <div class="container">
+            <div class="breadcrumbs-list">
+                <a href="{% url 'show_index_page' %}">Главная</a>
+                <a href="{% url 'show_private_client_page' %}">{{ category.parent_category.title }}</a>
+                <span>{{ category.title }}</span>
+            </div>
+        </div>
+    </div>
+    <section data-scrollax-parent="true">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="about-title fl-wrap">
+                        <h2 class="con-heading">{{ category.title }}</h2>
+                    </div>
+                    <div class="about-wrap">
+                        <p>{{ category.description | linebreaksbr }}</p>
+                        <a href="#need_consultation" class="btn float-btn"><span>Заказать товар</span></a>
+                        {% comment %} <a href="#" class="btn as-btn-white"><span>Заказать товар</span></a> {% endcomment %}
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <div class="about-img fl-wrap">
+                        <img src="{% if category.picture %}{{ category.picture.url }}{% else %}{% static 'images/folio/1.jpg' %}{% endif %}" class="respimg" alt="{{ category.title }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gray-bg small-top_padding stp-bot">
+        <div class="hex-bg"><span class="hex hex1"></span><span class="hex hex2"></span><span class="hex hex3"></span></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="fl-wrap post-container">
+                        <!-- post-->
+                        <article class="post single-post">
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Подробнее о характеристиках</h4>
+                                <div class="clearfix"></div>
+                                <p>
+                                    Сварные металлические заборы используются практически повсеместно. Лаконичные системы ограждений хорошо вписываются в окружающую
+                                    среду, сохраняя полноценную видимость на территории объекта, а также за ее пределами. Поэтому их устанавливают вокруг детских
+                                    центров, образовательных учреждений, спортивных площадок, крупных парковок, промышленных центров.
+                                </p>
+                                <p>
+                                    Спрос объясняется высокими эксплуатационными качествами, среди них: большой запас прочности, устойчивость к нагрузкам, коррозии.
+                                </p>
+                                <p>
+                                    Другие преимущества:
+                                </p>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">
+                                        Срок службы ограждения — не менее 20 лет
+                                    </li>
+                                    <li class="as-li-left">
+                                        Широкий выбор цвета — палитра RAL
+                                    </li>
+                                    <li class="as-li-left">
+                                        устойчивость сварной сетки к ультрафиолету, деформации, перекосам
+                                    </li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                                <p>
+                                    Ограда не горит, не боится влаги, снега. Еще один несомненный плюс — скорость монтажа на объекте. После подготовки фундамента установка секций займет 1—3 дня.
+                                </p>
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Ассортимент систем ограждений ДорХан</h4>
+                                <div class="clearfix"></div>
+                                <p>
+                                    Каталог стальных изгородей из сетки включает решения для всех потребительских групп. Самые экономичные среди них – воротные системы в 
+                                    базовой комплектации. В нее входят секции, опорные столбы, фиксаторы. Отдельно можно приобрести расширенные варианты с автоматическими 
+                                    приводами, стильными ручками для калитки и защитными фотоэлементами.
+                                </p>
+                                <p>
+                                    Основные группы сварных ворот:
+                                </p>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Распашные — классическая модель с двумя створками</li>
+                                    <li class="as-li-left">Откатные — сетчатое полотно съезжает в сторону, освобождая въезд</li>
+                                </ol>
+                                
+                                <span class="fw-separator fl-wrap"></span>
+                                <p>
+                                    Дополнительно предусмотрены калитки для легкого доступа на территорию. Эти элементы сделаны в едином стиле с основной конструкцией, поэтому ничто не нарушает гармонию экстерьера.
+                                </p>
+                                <p>
+                                    Сетчатые секции для каждой группы выполнены методом точечной сварки из прутьев диаметром 3—5 мм. Исходя из этого, выделяют отдельные серии бренда: Стандарт, Усиленная, Оптима, Оптима лайт.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="fl-wrap limit-box"></div>
+        </div>
+    </section>
+
+
+</div>
+
+{{ block.super }}
+{% endblock %}

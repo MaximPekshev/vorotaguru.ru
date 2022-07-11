@@ -1,0 +1,138 @@
+{% extends 'baseapp/category/base_category.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="content">
+    <section class="no-padding" data-scrollax-parent="true">
+        <div class="parallax-inner page-title-wrap">
+            <div class="bg" data-bg="{% static 'images/as_banner/3.jpg' %}" data-scrollax="properties: { translateY: '40%' }"></div>
+            <div class="parallax-wrap">
+                <div class="container">
+                    <div class="page-title">
+                        <h3>{{ category.title }}</h3>
+                    </div>
+                    <div class="hero-scroll-down-notifer  ">
+                        <div class="scroll-down-wrap ">
+                        </div>
+                    </div>
+                    <div class="pw_dec"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="breadcrumbs fl-wrap">
+        <div class="container">
+            <div class="breadcrumbs-list">
+                <a href="{% url 'show_index_page' %}">Главная</a>
+                <a href="{% url 'show_private_client_page' %}">{{ category.parent_category.title }}</a>
+                <span>{{ category.title }}</span>
+            </div>
+        </div>
+    </div>
+    <section data-scrollax-parent="true">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="about-title fl-wrap">
+                        <h2 class="con-heading">{{ category.title }}</h2>
+                    </div>
+                    <div class="about-wrap">
+                        <p>{{ category.description | linebreaksbr }}</p>
+                        <a href="#need_consultation" class="btn float-btn"><span>Заказать товар</span></a>
+                        {% comment %} <a href="#" class="btn as-btn-white"><span>Заказать товар</span></a> {% endcomment %}
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <div class="about-img fl-wrap">
+                        <img src="{% if category.picture %}{{ category.picture.url }}{% else %}{% static 'images/folio/1.jpg' %}{% endif %}" class="respimg" alt="{{ category.title }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gray-bg small-top_padding stp-bot">
+        <div class="hex-bg"><span class="hex hex1"></span><span class="hex hex2"></span><span class="hex hex3"></span></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="fl-wrap post-container">
+                        <!-- post-->
+                        <article class="post single-post">
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Виды ограждений</h4>
+                                <div class="clearfix"></div>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">
+                                        Откатные. При открывании их створки сдвигаются в сторону. В основе конструкции – алюминиевая рама, которую заполняют профлистом или сэндвич-панелями. 
+                                        Металлический профиль обеспечивает легкость конструкций, многослойные панели – хорошую шумоизоляцию. Отказ от сварных швов на производстве помогает 
+                                        предотвратить коррозию системы. Существует набор стандартных цветов для ограждений этого вида: коричнево-красный, зеленый, коричневый. По вашему заказу будут использоваться другие оттенки
+                                    </li>
+                                    <li class="as-li-left">
+                                        Распашные. Створки их открываются внутрь либо наружу огражденной территории. В качестве наполнителя для алюминиевых рам используются сэндвич-панели.
+                                        Инженерами предусмотрены резьбовые соединения, упрощающие сборку, установку и повышающие устойчивость системы ограждений к коррозии.
+                                        Есть 11 стандартных цветов для распашных конструкций, но по желанию заказчика применяются и другие. Детали металлических ворот покрывают слоем цинка в 12 мкм.
+                                        Он защищает конструкции от снега, дождя, царапин, ударов при эксплуатации. Для соединения используют болты, заметно облегчающие монтаж.
+                                        Окрашивание выполняют порошковой эмалью, качество которой отвечает требованиям стандарта Qualicoat.
+                                    </li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Конструкция</h4>
+                                <div class="clearfix"></div>
+                                <p>
+                                    В базовую комплектацию ворот включены:
+                                </p>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Комплект уловителей</li>
+                                    <li class="as-li-left">Полотно с балкой</li>
+                                    <li class="as-li-left">Система роликов и направляющих</li>
+                                    <li class="as-li-left">Комплект для зубчатой рейки</li>
+                                    <li class="as-li-left">Крышки для декоративных балок</li>
+                                </ol>
+                                
+                                <span class="fw-separator fl-wrap"></span>
+                                <p>
+                                    Для любых моделей можно использовать окна квадратной, прямоугольной или круглой формы, которые врезаются в полотно по желанию
+                                    покупателя. Чтобы изготавливать прозрачные вставки, применяют ударопрочный пластик. Полотно может быть с гладкой или фактурной
+                                    поверхностью. При выборе автоматических уличных ворот следует учитывать их массу, площадь, режим работы. Эти факторы влияют на
+                                    подборку нужного привода, с помощью которого можно управлять механизмом дистанционно и надежно запирать полотно.
+                                </p>
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <h4 class="post-title">Способы монтажа</h4>
+                                <div class="clearfix"></div>
+                                <p>
+                                    Существует 2 метода установки распашных конструкций:
+                                </p>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Бетонируемые столбы. Монтаж выполняют в заранее подготовленном котловане размерами 300×300×1500 мм (глубина промерзания почвы)</li>
+                                    <li class="as-li-left">Навесные столбы. Их прикрепляют к столбам проема с помощью анкерных болтов</li>
+                                </ol>
+                            </div>
+                            <div class="post-content fl-wrap">
+                                <div class="clearfix"></div>
+                                <p>
+                                    Также выделяют 2 метода установки откатных ворот:
+                                </p>
+                                <ol class="as-list-dot">
+                                    <li class="as-li-left">Устройство силовой рамы. По разметке создают котлован глубиной 1500 мм, шириной 500 мм, затем делают песчано-гравийную подсыпку высотой 100 мм. Бетонная подушка начинается от края</li>
+                                    <li class="as-li-left">Бетонирование столба-ловителя. Установку столбов производят в заранее подготовленном котловане шириной и длиной 400 мм, глубиной 1500 мм</li>
+                                </ol>
+                                <span class="fw-separator fl-wrap"></span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="fl-wrap limit-box"></div>
+        </div>
+    </section>
+
+
+</div>
+
+{{ block.super }}
+{% endblock %}
