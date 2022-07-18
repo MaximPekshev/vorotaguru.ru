@@ -15,6 +15,24 @@
 	<link type="text/css" rel="stylesheet" href="{% static 'css/as-style.css' %}">
 	<!--=============== favicons ===============-->
 	<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript" >
+	(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+	   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+	   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+	
+	   ym(89453636, "init", {
+			clickmap:true,
+			trackLinks:true,
+			accurateTrackBounce:true,
+			webvisor:true,
+			ecommerce:"dataLayer"
+	   });
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/89453636" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter --> 
+
 </head>
 
 <body>
@@ -52,7 +70,7 @@
 			<div class="header-inner fl-wrap">
 				<div class="container">
 					<a href="{% url 'show_index_page'%}" class="logo-holder"><img src="{% static 'images/as-logo.png' %}" alt=""></a>
-					<a href="cost.html" class="header-btn color-bg"><span>КАЛЬКУЛЯТОР</span> <i class="fal fa-watch-calculator"></i></a>
+					<a href="{% url 'show_calculator' %}" class="header-btn color-bg"><span>КАЛЬКУЛЯТОР</span> <i class="fal fa-watch-calculator"></i></a>
 					<div class="nav-button-wrap">
 						<div class="nav-button">
 							<span></span><span></span><span></span>

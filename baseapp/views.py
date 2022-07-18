@@ -83,4 +83,13 @@ def show_about(request):
         'corporate_categories': Category.objects.filter(parent_category__title="Корпоративному клиенту"),
     }
 
-    return render(request, 'baseapp/about.html', context)    
+    return render(request, 'baseapp/about.html', context)
+
+def show_calculator(request):
+
+    context = {
+        'private_categories': Category.objects.filter(parent_category__title="Частному клиенту"),
+        'corporate_categories': Category.objects.filter(parent_category__title="Корпоративному клиенту"),
+    }
+
+    return render(request, 'baseapp/calculator.html', context)

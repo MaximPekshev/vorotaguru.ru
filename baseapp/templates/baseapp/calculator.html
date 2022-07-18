@@ -1,0 +1,60 @@
+
+{% extends 'baseapp/category/base_category.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="content">
+    <section class="no-padding" data-scrollax-parent="true">
+        <div class="parallax-inner page-title-wrap">
+            <div class="bg" data-bg="{% static 'images/as_banner/3.jpg' %}" data-scrollax="properties: { translateY: '40%' }"></div>
+            <div class="parallax-wrap">
+                <div class="container">
+                    <div class="page-title">
+                        <h3>Калькулятор</h3>
+                    </div>
+                    <div class="hero-scroll-down-notifer  ">
+                        <div class="scroll-down-wrap ">
+                        </div>
+                    </div>
+                    <div class="pw_dec"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="breadcrumbs fl-wrap">
+        <div class="container">
+            <div class="breadcrumbs-list">
+                <a href="{% url 'show_index_page' %}">Главная</a>
+                <span>Калькулятор</span>
+            </div>
+        </div>
+    </div>
+    <div class="gray-bg small-top_padding stp-bot" id="calculator">
+    </div>
+
+
+</div>
+
+{{ block.super }}
+
+<script>
+    (function (t, h, e, A, I, D, E) {
+        D=h.createElement(e);D.async=1;D.setAttribute("crossorigin","use-credentials");
+        D.src=A+"?data="+encodeURIComponent(JSON.stringify(I));I.src=A;t.dhAide={egg:I};
+        h.getElementsByTagName(e)[0].parentNode.appendChild(D);
+    })(window, document, "script", "https://aide.doorhan.ru/dhaide/js/dhaide.js",
+    {
+        type: "full",
+        markup: 0,
+        cityCode: "CB0000048",
+        dealerCode: "VR0000633",
+        agreementLink: "",
+        lang: "ru-RU",
+        layout: {
+            aide: "calculator",
+        }
+    });
+</script>
+{% endblock %}
