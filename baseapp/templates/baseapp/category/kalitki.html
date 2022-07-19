@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %}{% if category.meta_title %}{{ category.meta_title }}{% else %}{% endif %}{% endblock %}
+{% block title %}{% if category.meta_name %}{{ category.meta_name }}{% else %}{% endif %}{% endblock %}
 {% block keywords %}{% if category.meta_keywords %}{{ category.meta_keywords }}{% else %}{% endif %}{% endblock %}
 {% block description %}{% if category.meta_description %}{{ category.meta_description }}{% else %}{% endif %}{% endblock %}
 
