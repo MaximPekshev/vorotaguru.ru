@@ -2,6 +2,10 @@
 
 {% load static %}
 
+{% block title %}{% if page.meta_title %}{{ page.meta_title }}{% else %}{% endif %}{% endblock %}
+{% block keywords %}{% if page.meta_keywords %}{{ page.meta_keywords }}{% else %}{% endif %}{% endblock %}
+{% block description %}{% if page.meta_description %}{{ page.meta_description }}{% else %}{% endif %}{% endblock %}
+
 {% block content %}
 <section class="no-padding" data-scrollax-parent="true">
     <div class="parallax-inner page-title-wrap">

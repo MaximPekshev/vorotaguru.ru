@@ -3,6 +3,10 @@
 
 {% load static %}
 
+{% block title %}{% if page.meta_title %}{{ page.meta_title }}{% else %}{% endif %}{% endblock %}
+{% block keywords %}{% if page.meta_keywords %}{{ page.meta_keywords }}{% else %}{% endif %}{% endblock %}
+{% block description %}{% if page.meta_description %}{{ page.meta_description }}{% else %}{% endif %}{% endblock %}
+
 {% block content %}
 
 <div class="content">
@@ -49,7 +53,7 @@
         markup: 0,
         cityCode: "CB0000048",
         dealerCode: "VR0000633",
-        agreementLink: "",
+        agreementLink: "https://vorotaguru.ru/privacy-policy/",
         lang: "ru-RU",
         layout: {
             aide: "calculator",

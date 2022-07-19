@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Category, Portfolio, Portfolio_category
+from .models import Category, Portfolio, Portfolio_category, Page
 
 class CategoryAdmin(admin.ModelAdmin):
 	list_display = (
@@ -21,3 +21,5 @@ class Portfolio_categoryAdmin(admin.ModelAdmin):
 
 	exclude = ('cpu_slug',)
 admin.site.register(Portfolio_category, Portfolio_categoryAdmin)
+
+admin.site.register(Page)
