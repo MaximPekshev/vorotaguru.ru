@@ -18,19 +18,17 @@
                             <div id="addcom" class="clearafix">
                                 <div id="need_consultation" class="pr-subtitle">Нужна консультация?</div>
                                 <div class="comment-reply-form fl-wrap">
-                                    <form id="add-comment" class="add-comment custom-form">
-                                        <fieldset>
+                                    <form id="contactForm" class="add-comment custom-form">
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <input type="text" placeholder="Ваше Имя *" value="" />
+                                                    <input type="text" placeholder="Ваше Имя *" value="" id="input_name" />
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <input type="text" placeholder="Email*" value="" />
+                                                    <input onKeyPress="inputFilter()" type="text" placeholder="Телефон *" value="" id="input_phone" />
                                                 </div>
                                             </div>
-                                            <textarea placeholder="Ваш комментарий:"></textarea>
-                                        </fieldset>
-                                        <button class="btn"><i class="fa fa-angle-right"></i><span>Задать вопрос</span></button>
+                                            <textarea placeholder="Ваш комментарий:" id="input_comment"></textarea>
+                                        <button class="btn" id="submitForm" form="contactForm"><i class="fa fa-angle-right"></i><span>Задать вопрос</span></button>
                                     </form>
                                 </div>
                             </div>
@@ -42,5 +40,23 @@
         <div class="fl-wrap limit-box"></div>
     </div>
 </section>
+
+<script>
+
+window.onload = function() {
+    document.getElementById('submitForm').addEventListener('click', function(event) {
+        event.preventDefault();
+    }, false);
+};
+
+function inputFilter(){
+    if (event.keyCode < 48 || event.keyCode > 57) {
+        if (event.keyCode != 46){
+            event.returnValue= false;
+        }
+    }
+    
+};
+</script>
 
 {% endblock %}
